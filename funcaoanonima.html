@@ -1,0 +1,59 @@
+<button id="botao">clique-me</button>
+<script>
+
+    var botao = document.querySelector('#botao');
+
+    function botaoHandler() {
+
+        alert('Botão clicado');
+    }
+
+    botao.addEventListener('click', botaoHandler);
+</script>
+
+var botao = document.querySelector('#botao');
+
+botao.addEventListener('click', function() {
+
+    alert('Botão clicado');
+
+
+
+<!-- Por ser uma declaração de função, podemos utilizar a mesma função para outros eventos do sistema. No entanto, quando não faz muito sentido reaproveitar a função em outros lugares podemos declará-la na forma anônima. Qual das opções abaixo possui o código anterior modificado para trabalhar com funções anônimas? 
+
+var botao = document.querySelector('#botao');
+
+botao.addEventListener('click', function() {
+
+    alert('Botão clicado');
+
+
+var botao = document.querySelector('#botao');
+
+botao.addEventListener('click', function {
+
+    alert('Botão clicado');
+
+});
+
+var botao = document.querySelector('#botao')l
+
+botao.addEventListener('click', function() 
+
+    alert('Botão clicado');
+
+);
+
+var botao = document.querySelector('#botao');
+
+botao.addEventListener('click', () {
+
+    alert('Botão clicado');
+
+});
+
+
+
+
+
+-->

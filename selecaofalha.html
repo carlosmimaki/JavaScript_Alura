@@ -1,0 +1,48 @@
+<!-- João está montando um script em Javascript que deve pegar todos os nomes dos produtos de um e-commerce.
+
+O HTML da lista é como o abaixo: -->
+
+<ul class="lista-produtos">
+    <li class="produto">Web cam</li>
+    <li class="produto">Microfone</li>
+    <li class="produto">Fundo verde</li>
+    <li class="produto">Notebook</li>
+</ul>COPIAR CÓDIGO
+<!-- E o script do João é o seguinte:
+
+var produtos = document.querySelector("lista-produtos"); -->
+<script>
+
+for( var i=0 ; i < produtos.length ; i++){
+    var produto  = produtos[i];
+    var nomeDoProduto = produto.textContent;
+    console.log(nomeDoProduto);
+}
+
+</script>
+
+<!-- Porém o script não funciona como João espera.
+
+Quais alternativas abaixo apontam para os possíveis erros do código de João ? -->
+
+<!-- ---------------------------------------------------------------------------------
+João utilizou a propriedade textContent errada, ele poderia simplesmente imprimir o produto[i].
+
+
+Alternativa incorreta
+João está utilizando a função errada, como ele quer selecionar diversos elementos, ele deve usar a função querySelectorAll().
+
+Alternativa incorreta
+João está usando a propriedade .length que está escrito errado, o correto é .lenght.
+
+
+O correto é length mesmo, esta é uma palavra perigosa do Javascript
+
+Alternativa incorreta
+João esqueceu de colocar o . no seletor de sua função querySelector() e trocar o seletor para apenas "produto". Dessa forma, o seletor correto seria ".produto".
+
+João cometeu dois erros ao querer selecionar todos os produtos da lista.
+
+O primeiro foi o uso da função de seleção errada, afinal se ele queria selecionar todos os produtos ele deveria utilizar a função querySelectorAll(), que retornar um array com todo mundo que atende critério de seleção.
+
+O segundo erro foi no parâmetro da função seletora, se ele deseja buscar por todos os produtos que tem classe produto, ele deve utilizar o seletor de classe que é ponto. -->

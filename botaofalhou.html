@@ -1,0 +1,27 @@
+Maria está ansiosa para descobrir a razão do seu código não ter funcionado. É um código simples, que exibe um alerta quando um botão é clicado:
+
+<button id="botao">clique-me</button>
+<script>
+
+    var botao = document.querySelector('#botao');
+
+    function botaoHandler() {
+
+        alert('Botão clicado');
+    }
+
+    botao.addEventListener('click', botaoHandler);
+</script>
+
+
+Medite sobre o código de Maria e tente descobrir o problema. Assim que tiver chegado a uma conclusão, clique em "Ver Opinião do Instrutor" para ver a resposta do instrutor.
+
+O problema está nessa linha:
+
+botao.addEventListener('click', botaoHandler());
+
+Em vez de associar a função botaoHandler para o evento click, ela acabou associando o retorno da função, ao adiciona-la usando parênteses. Como a função não retorna nada, o código que será executado será igual a nada quando o botão for clicado. Para corrigirmos o código, basta retirarmos os parênteses:
+
+botao.addEventListener('click', botaoHandler);
+
+Veja que não estamos mais chamando a função, mas passando-a por inteiro para o evento click . Quando o botão for clicado, por debaixo dos panos, o navegador executará botaoHandler() para nós.

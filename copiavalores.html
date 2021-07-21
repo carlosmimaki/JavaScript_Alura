@@ -1,0 +1,47 @@
+<!-- Wagner, para testar suas habilidades adquiridas neste capítulo resolveu fazer um teste. Ele criou o seguinte HTML:
+
+<input class="frase"><button class="botao">Copiar</button><span class="copia"></span>
+
+
+O código anterior exibe um campo para digitar uma frase e um botão ao lado. Sua intenção é copiar a frase digitada para a tag span, que vem logo após o botão. Além disso, assim que a cópia for feita, será necessário apagar o conteúdo do input com a classe frase.
+
+Ele sabe que todo elemento de entrada, isto é, que recebe entrada do usuário possui a propriedade value enquanto elementos que exibem informações apenas possuem a propriedade textContent como é o caso da nossa tag span.
+
+Ele começou a fazer o código e parou no meio. Este é o código escrito por Wagner: -->
+
+<input class="frase"><button class="botao">Copiar</button><span class="copia"></span>
+<script>
+    var inputFrase = document.querySelector('.frase');
+    var botao = document.querySelector('.botao');
+    var copia = document.querySelector('.copia');
+
+    function botaoHandler() {
+
+        copia.textContent = inputFrase.value;
+        inputFrase.value = '';
+    } 
+
+    botao.addEventListener('click', botaoHandler);
+ </script>
+
+<!-- Qual das opções abaixo completa corretamente a função botaoHandler para lidar com o clique do botão copiando o valor do input para a tag span e, assim que copiar, apagar o valor da tag input?
+
+function botaoHandler() {
+
+        inputFrase.value = '';
+        copia.textContent = inputFrase.value;
+
+    }
+
+ function botaoHandler() {
+
+        copia.value = inputFrase.textContent;
+        inputFrase.textContent = '';
+
+    }
+
+function botaoHandler() {
+
+        copia.textContent = inputFrase.value;
+        inputFrase.value = '';
+    } -->

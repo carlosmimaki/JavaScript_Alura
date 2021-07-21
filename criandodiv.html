@@ -1,0 +1,55 @@
+<!-- Qual código Javascript abaixo cria uma <div> como esta : -->
+
+<div>
+    <h1 class="titulo"> Mirror Fashion </h1>
+    <p> Uma loja de roupa fantástica</p>
+</div>
+
+<!-- COPIAR CÓDIGO
+Alternativa correta
+var div = document.createElement("div");
+var h1 = document.createElement("h1");
+h1.textContent = "Mirror Fashion";
+
+var p = document.createElement("p");
+
+div.appendChild(h1);
+div.appendChild(p); -->
+
+Alternativa correta
+var div = document.createElement("div");
+var h1 = document.createElement("h1");
+h1.classList.add("titulo");
+h1.textContent = "Mirror Fashion";
+
+var p = document.createElement("p");
+p.textContent = "Uma loja de roupa fantástica";
+
+div.appendChild(h1);
+div.appendChild(p);
+
+
+<!-- Alternativa correta
+var div = document.create("div");
+var h1 = document.create("h1");
+h1.classList.add("titulo");
+h1.textContent = "Mirror Fashion";
+
+var p = document.create("p");
+p.textContent = "Uma loja de roupa fantástica";
+
+div.appendChild(h1);
+div.appendChild(p); -->
+<!-- ---------------------------------------------------------------------------------------------------
+A função responsável por criar um elemento no Javascript é a createElement() e não create().
+
+Alternativa correta
+var div = document.createElement("div");
+var h1 = document.createElement("h1");
+h1.classList.add("titulo");
+h1.textContent = "Mirror Fashion";
+
+var p = document.createElement("p");
+p.textContent = "Uma loja de roupa fantástica";
+
+A função responsável por criar elementos no Javascript é a createElement().Com ela passamos o nome da tag que queremos criar e ela nos retorna um objeto HTML que pode ser alterado com as propriedades do Javascript, como a .textContent e a .classList. -->

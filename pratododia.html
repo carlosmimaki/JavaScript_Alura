@@ -1,0 +1,49 @@
+<table>
+<thead>
+    <tr>            
+        <th>Salada</th>
+        <th>Prato Principal</th>
+        <th>Acompanhamento</th>
+    </tr>
+</thead>
+<tbody>
+    <tr class="prato-do-dia" id="sexta">
+        <td class='salada'>Alface e Tomate</td>
+        <td class='principal'>Frango Grelhado</td>
+        <td class='acompanhamento'>Arroz e Feijão preto</td>        
+    </tr>
+    ...Outros dias da semana
+    <tr class="prato-do-dia" id="segunda">
+        <td class='salada'>Salada de Batata</td>
+        <td class='principal'>Macarrão com molho branco</td>
+        <td class='acompanhamento'>Milho, ervilha e brócolis</td>        
+    </tr>
+</tbody>
+</table>
+    <script>
+        var pratoDoDia = document.querySelector("#sexta");
+        var salada = pratoDoDia.querySelector(".salada").textContent;
+        var principal = pratoDoDia.querySelector(".principal").textContent;
+        var acompanhamento = pratoDoDia.querySelector(".acompanhamento").textContent;
+
+        console.log("Prato do dia!");
+        console.log(salada);
+        console.log(principal);
+        console.log(acompanhamento);
+
+    </script>
+
+<!-- A melhor estratégia neste caso, como queremos buscar os pratos de um dia específico é primeiro buscar a <tr> que contêm os pratos deste dia, fazendo o uso da função document.querySelector:
+Em seguida, vamos buscar dentro desta <tr> por os pratos específicos, então vamos utilizar a função querySelector na própria <tr> *, afinal a função querySelector() é especialista *em buscar, seja na página inteira quando utilizamos-a buscando no document (document.querySelector) ou quando queremos fazer uma busca em elemento específico que foi pré selecionado , como é o caso agora:
+
+var salada = pratoDoDia.querySelector(".salada").textContent;
+var principal = pratoDoDia.querySelector(".principal").textContent;
+var acompanhamento = pratoDoDia.querySelector(".acompanhamento").textContent;COPIAR CÓDIGO
+Já aproveitamos e emendamos na função seletora a propriedade textContent , afinal estamos interessados é no nome do prato que está escrito dentro da tag html, e não na tag em si!
+
+Em seguida, basta apenas imprimirmos como foi solicitado:
+
+console.log("Prato do dia!");
+console.log(salada);
+console.log(principal);
+console.log(acompanhamento); -->

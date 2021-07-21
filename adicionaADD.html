@@ -1,0 +1,12 @@
+<!-- A função responsável por adicionar uma classe é a função .add(), que recebe como parâmetro o nome da classe que queremos adicionar!
+
+Só devemos lembrar de chamar esta função depois de acessarmos a propriedade .classList, que contêm as classes do HTML selecionado. Então, para resolver o problema de Rômulo, devemos utilizar o código abaixo: -->
+<script>
+var titulos = document.querySelectorAll("h2");
+
+for(var i = 0 ; i <  titulos.length ; i++){
+    var titulo = titulos[i];
+    titulo.classList.add("titulo");
+}
+
+</script>
